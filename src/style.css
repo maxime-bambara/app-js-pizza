@@ -1,0 +1,87 @@
+:root {
+    --primary-color: hsl(345, 91%, 50%);
+    --darken-primary-color:hsl(345, 91%, 25%);
+    --lighten-primary-color:hsl(345, 91%, 65%);
+    --secondary-color: hsl(204, 44%, 50%);
+    --darken-secondary-color:hsl(204, 44%, 25%);
+    --lighten-secondary-color:hsl(204, 44%, 65%);
+}
+
+body {
+ margin: 0;
+ padding: 0;
+ background: black;
+ color: white;
+ font-family: sans-serif;
+ display: flex;
+ flex-flow: column nowrap;
+ justify-content: space-between;
+ height: auto;
+ min-width: 500px;
+}
+
+/* Header */
+
+header{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--primary-color);
+    box-shadow: 0 3px var(--darken-secondary-color);
+
+}
+
+header .logo img{
+    width: 70px;
+}
+
+/* FOOTER */
+footer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas: "menu about infos" 
+                         ". admin ." ;
+    padding: 30px;
+    font-size: 0.7rem;
+
+    background: var(--primary-color);
+    box-shadow: 0 -3px var(--darken-secondary-color);
+
+}
+
+footer p{
+    cursor: pointer;
+
+}
+
+footer .menu{
+    grid-area: menu;
+}
+
+footer .about{
+    grid-area: about;
+}
+
+footer .infos{
+    grid-area: infos;
+}
+
+footer .admin{
+    grid-area: admin;
+    margin-top: 20px;
+    text-align: center;
+}
+
+footer .admin::before{
+    content: "🔐";
+}
+
+footer .admin a{
+    cursor: pointer;
+    color: var(--darken-secondary-color);
+}
+
+footer .admin a:hover{
+    color: var(--secondary-color);
+}
