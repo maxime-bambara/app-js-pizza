@@ -1,3 +1,7 @@
+import { Router } from './app/router.js';
 import { App } from './app/app.js';
 
-new App();
+const app = new App();
+Router.run(app);
+
+window.addEventListener('hashchange', () => Router.run(app));
