@@ -47,11 +47,6 @@ main{
                          "details details cart";
 }
 
-#home{
-    display: none;
-}
-
-
 .pizzas.slider{
     grid-area: pizzas;
     overflow:hidden
